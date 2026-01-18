@@ -1,0 +1,11 @@
+customer_state,seller_state,product_weight_g,price,product_length_cm,product_width_cm,product_height_cm,customer_zip_code_prefix,seller_zip_code_prefix,freight_value,num_items,num_unique_sellers,total_freight_value,total_payment_value,num_payments,product_category_name,customer_state_geo,seller_state_geo,product_name_lenght,product_description_lenght
+SP,RJ,800,120.0,25,18,12,1310,20031,18.0,1,1,18.0,120.0,1,eletronicos,SP,RJ,45,600
+RJ,SP,1500,250.0,30,20,15,20031,1310,30.0,1,1,30.0,250.0,1,moveis_decoracao,RJ,SP,60,800
+MG,MG,500,60.0,20,15,10,30140,30140,12.0,1,1,12.0,60.0,1,livros_papelaria,MG,MG,35,400
+PR,SC,2200,180.0,40,25,20,80010,88010,25.0,2,1,25.0,180.0,1,esporte_lazer,PR,SC,55,700
+BA,SP,900,90.0,28,18,14,40010,1310,16.0,1,1,16.0,90.0,1,beleza_saude,BA,SP,50,650
+RS,PR,3000,320.0,50,30,25,90010,80010,40.0,1,1,40.0,320.0,1,informaticas,RS,PR,70,900
+SC,SC,1100,140.0,32,22,16,88010,88010,20.0,1,1,20.0,140.0,1,telefonia,SC,SC,48,750
+SP,MG,700,75.0,22,16,12,1310,30140,14.0,1,1,14.0,75.0,1,brinquedos,SP,MG,40,500
+RJ,BA,1800,210.0,35,24,18,20031,40010,28.0,1,1,28.0,210.0,1,casa_construcao,RJ,BA,65,820
+MG,SP,950,130.0,27,19,13,30140,1310,19.0,1,1,19.0,130.0,1,utilidades_domesticas,MG,SP,52,680
