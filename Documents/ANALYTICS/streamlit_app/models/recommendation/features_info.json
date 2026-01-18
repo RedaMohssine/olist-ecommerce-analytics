@@ -1,0 +1,17 @@
+{
+  "numeric_columns": [
+    "avg_price",
+    "review_score",
+    "volume"
+  ],
+  "categorical_columns": [
+    "product_category_name"
+  ],
+  "all_features": [
+    "avg_price",
+    "review_score",
+    "product_category_name",
+    "volume"
+  ],
+  "k_neighbors": 5
+}
