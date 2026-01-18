@@ -472,13 +472,15 @@ elif mode == "📊 Prédiction Globale":
             predictions = [last_value for _ in range(6)]
         
         # Combiner historique et prédictions
-        combined_dates = list(monthly_orders.index[-12:]) + list(future_dates)
-        combined_values = list(monthly_orders.iloc[-12:]) + predictions
+        # Prendre seulement les derniers mois disponibles (minimum entre 12 et la longueur réelle)
+        hist_months = min(12, len(monthly_orders))
+        combined_dates = list(monthly_orders.index[-hist_months:]) + list(future_dates)
+        combined_values = list(monthly_orders.iloc[-hist_months:].values) + list(predictions)
         
         combined_df = pd.DataFrame({
             'Mois': combined_dates,
             'Commandes': combined_values,
-            'Type': ['Historique'] * 12 + ['Prédiction'] * 6
+            'Type': ['Historique'] * hist_months + ['Prédiction'] * len(predictions)
         })
         
         chart = create_area_chart(combined_df, 'Mois', 'Commandes', "Commandes Mensuelles - Historique + Prédictions")
