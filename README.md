@@ -375,6 +375,3 @@ Pour toute question ou suggestion, n'hésitez pas à ouvrir une issue sur GitHub
 ---
 
 ⭐ Si ce projet vous a été utile, n'hésitez pas à lui donner une étoile sur GitHub !
-#   o l i s t - e c o m m e r c e - a n a l y t i c s 
- 
- # olist-ecommerce-analytics
