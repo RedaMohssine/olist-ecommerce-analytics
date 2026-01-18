@@ -77,3 +77,8 @@ logs/
 # OS
 Thumbs.db
 .DS_Store
+Documents/
+*.rar
+*.zip
+*.rar
+*.zip
