@@ -1,0 +1,33 @@
+{
+  "model_name": "KNN Product Recommendation",
+  "model_type": "clustering",
+  "trained_date": "2026-01-18 17:01:22",
+  "n_products": 32183,
+  "n_features": 76,
+  "k_neighbors": 5,
+  "metric": "cosine",
+  "algorithm": "brute",
+  "metrics": {
+    "avg_similarity": 0.04745467713049349,
+    "median_similarity": 0.05072539352019337,
+    "category_coherence": 0.98775,
+    "catalog_coverage": 0.11624149395643663,
+    "topk_avg_similarity": 0.9946845083922151
+  },
+  "data_info": {
+    "n_categories": 73,
+    "avg_price": 145.65632011927028,
+    "avg_review_score": 4.05071987992693,
+    "avg_order_count": 3.444209675915856
+  },
+  "features": {
+    "numeric": [
+      "avg_price",
+      "review_score",
+      "volume"
+    ],
+    "categorical": [
+      "product_category_name"
+    ]
+  }
+}
