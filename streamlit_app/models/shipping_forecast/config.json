@@ -1,0 +1,109 @@
+{
+  "model_name": "XGBoost Shipping Time Forecast",
+  "model_type": "shipping_prediction",
+  "trained_date": "2026-01-18 20:18:22",
+  "algorithm": "XGBoost Regressor",
+  "data_info": {
+    "n_train_samples": 86688,
+    "n_test_samples": 21673,
+    "n_features": 33,
+    "target": "shipping_time_days",
+    "target_range": "1 - 40 jours"
+  },
+  "metrics": {
+    "mae": 3.4186715288072684,
+    "rmse": 4.960456983079239,
+    "r2_score": 0.5351854728055081
+  },
+  "hyperparameters": {
+    "n_estimators": 800,
+    "max_depth": 10,
+    "learning_rate": 0.05,
+    "subsample": 0.7,
+    "colsample_bytree": 1.0,
+    "min_child_weight": 3
+  },
+  "features": {
+    "total_features": 33,
+    "numeric_features": [
+      "customer_zip_code_prefix",
+      "total_payment_value",
+      "num_payments",
+      "order_item_id",
+      "price",
+      "freight_value",
+      "product_name_lenght",
+      "product_description_lenght",
+      "product_weight_g",
+      "product_length_cm",
+      "product_height_cm",
+      "product_width_cm",
+      "seller_zip_code_prefix",
+      "purchase_dayofweek",
+      "purchase_month",
+      "time_to_approve_order",
+      "customer_lat",
+      "customer_lng",
+      "seller_lat",
+      "seller_lng",
+      "distance_customer_seller",
+      "num_items",
+      "num_unique_sellers",
+      "total_freight_value",
+      "circuity_distance",
+      "seller_avg_dispatch"
+    ],
+    "categorical_features": [
+      "order_status",
+      "customer_state",
+      "product_category_name",
+      "seller_state",
+      "purchase_season",
+      "customer_state_geo",
+      "seller_state_geo"
+    ],
+    "key_feature": "seller_avg_dispatch",
+    "feature_categories": {
+      "temporal": [
+        "purchase_dayofweek",
+        "purchase_month",
+        "purchase_season"
+      ],
+      "geographic": [
+        "distance_customer_seller",
+        "circuity_distance"
+      ],
+      "order_details": [
+        "num_items",
+        "num_unique_sellers",
+        "total_freight_value"
+      ],
+      "product": [
+        "price",
+        "freight_value",
+        "product_weight_g",
+        "product_length_cm",
+        "product_height_cm",
+        "product_width_cm"
+      ],
+      "seller": [
+        "seller_avg_dispatch"
+      ]
+    }
+  },
+  "prediction_info": {
+    "target": "shipping_time_days",
+    "unit": "jours",
+    "requires_features": [
+      "seller_id",
+      "customer_zip_code_prefix",
+      "seller_zip_code_prefix",
+      "purchase_dayofweek",
+      "purchase_month",
+      "distance_customer_seller",
+      "num_items",
+      "product_weight_g"
+    ],
+    "output_type": "float (jours de livraison)"
+  }
+}
