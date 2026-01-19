@@ -94,7 +94,7 @@ Une plateforme d'analyse e-commerce intelligente propulsée par l'IA et le Machi
 
 1. **Cloner le repository**
 ```bash
-git clone https://github.com/votre-username/olist-analytics-platform.git
+git clone https://github.com/RedaMohssine/olist-analytics-platform.git
 cd olist-analytics-platform
 ```
 
