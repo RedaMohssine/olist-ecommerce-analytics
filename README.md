@@ -1,4 +1,4 @@
-# 🛍️ Olist E-Commerce Analytics Platform
+# Olist E-Commerce Analytics Platform
 
 Une plateforme d'analyse e-commerce intelligente propulsée par l'IA et le Machine Learning, construite avec Streamlit et Python. Cette application offre des fonctionnalités avancées d'analyse de données, de prédiction et de visualisation pour optimiser les performances d'une plateforme e-commerce.
 
@@ -6,7 +6,7 @@ Une plateforme d'analyse e-commerce intelligente propulsée par l'IA et le Machi
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.32.0-red)
 ![XGBoost](https://img.shields.io/badge/XGBoost-2.0.3-orange)
 
-## 📋 Table des matières
+## Table des matières
 
 - [Fonctionnalités](#-fonctionnalités)
 - [Technologies](#-technologies)
@@ -18,50 +18,50 @@ Une plateforme d'analyse e-commerce intelligente propulsée par l'IA et le Machi
 - [Authentification](#-authentification)
 - [Contribution](#-contribution)
 
-## ✨ Fonctionnalités
+## Fonctionnalités
 
-### 🔐 Authentification & Rôles
+### Authentification & Rôles
 - Système d'authentification sécurisé avec SQLite
 - Deux rôles utilisateur : **Admin** et **Client**
 - Interface adaptée selon les permissions
 
-### 📊 Dashboard Administrateur
+### Dashboard Administrateur
 - Visualisation des KPIs en temps réel (revenus, commandes, satisfaction)
 - Graphiques interactifs avec Plotly
 - Analyse de tendances et insights business
 - Exportation de rapports CSV
 
-### 🚚 Prédiction de Délais de Livraison
+### Prédiction de Délais de Livraison
 - Modèle XGBoost avec **MAE de 3.42 jours**
 - Prédiction individuelle ou par lot (CSV)
 - Prise en compte de multiples facteurs : distance, poids, état client/vendeur
 - Visualisation des délais par région
 
-### 💬 Analyse de Sentiment
+### Analyse de Sentiment
 - Classification automatique des avis clients (positif/neutre/négatif)
 - Modèle ML avec **accuracy de 80.5%**
 - Analyse par lot et analyse par vendeur
 - Identification des vendeurs top/flop selon sentiment
 
-### 📦 Prédiction de Commandes
+### Prédiction de Commandes
 - Prévision du nombre de commandes par produit/mois avec XGBoost
 - **R² de 0.88** sur données historiques
 - Planification du stock automatique
 - Alertes de rupture de stock
 
-### 🛒 Catalogue Produits
+### Catalogue Produits
 - Système de recommandation KNN (32 953 produits)
 - Filtrage avancé par catégorie, prix, stock
 - Affichage de statistiques produit en temps réel
 - Estimation de livraison intégrée
 
-### ⚙️ Gestion de Modèles ML
+### Gestion de Modèles ML
 - Upload/versioning de modèles personnalisés
 - Historique des modèles avec restauration
 - Configuration des hyperparamètres
 - Tests de modèle en temps réel
 
-## 🛠 Technologies
+## Technologies
 
 ### Backend & Data Science
 - **Python 3.9+**
@@ -84,7 +84,7 @@ Une plateforme d'analyse e-commerce intelligente propulsée par l'IA et le Machi
 - **TF-IDF** - Vectorisation de texte
 - **Pipeline Sklearn** - Workflows ML
 
-## 📦 Installation
+## Installation
 
 ### Prérequis
 - Python 3.9 ou supérieur
@@ -133,7 +133,7 @@ Data/
 └── product_category_name_translation.csv
 ```
 
-## 🚀 Utilisation
+## Utilisation
 
 ### Lancer l'application
 
@@ -166,7 +166,7 @@ L'application sera accessible à l'adresse : `http://localhost:8501`
 - Recommandations personnalisées
 - Estimation de livraison
 
-## 📁 Structure du projet
+## Structure du projet
 
 ```
 ANALYTICS/
@@ -215,7 +215,7 @@ ANALYTICS/
 └── README.md                      # Ce fichier
 ```
 
-## 🤖 Modèles ML
+## Modèles ML
 
 ### 1. Prédiction de Livraison (XGBoost Regressor)
 - **Métriques** : MAE 3.42 jours | R² 0.85
@@ -243,7 +243,7 @@ ANALYTICS/
 - **Corpus** : 32,953 produits
 - **Fichier** : `models/recommendation/knn_model.pkl`
 
-## 📊 Datasets
+## Datasets
 
 Le projet utilise le **Brazilian E-Commerce Public Dataset by Olist** (Kaggle).
 
@@ -267,7 +267,7 @@ Le projet utilise le **Brazilian E-Commerce Public Dataset by Olist** (Kaggle).
 
 **Source** : [Olist Dataset sur Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
-## 🔐 Authentification
+## Authentification
 
 ### Système d'authentification
 - Base de données SQLite (`database/auth.db`)
@@ -295,7 +295,7 @@ def create_default_users():
     create_user("nouveau_user", "mot_de_passe", "Nom Complet", "admin")
 ```
 
-## 🎨 Personnalisation
+## Personnalisation
 
 ### Changer les couleurs
 Modifier `.streamlit/config.toml` :
@@ -319,7 +319,7 @@ Dans `config/models_config.json` :
 }
 ```
 
-## 📝 Scripts Jupyter Notebooks
+## Scripts Jupyter Notebooks
 
 Les notebooks dans `notebooks/` contiennent :
 - **analytics_shipping_time.ipynb** : Entraînement du modèle XGBoost de livraison
@@ -327,7 +327,7 @@ Les notebooks dans `notebooks/` contiennent :
 
 Ces notebooks sont fournis pour reproduire l'entraînement des modèles.
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Erreur : "Modèle non disponible"
 - Vérifier que les fichiers `.pkl` sont présents dans `models/`
@@ -347,7 +347,7 @@ python -c "import nltk; nltk.download('stopwords'); nltk.download('rslp')"
 streamlit run app.py --server.port 8502
 ```
 
-## 🤝 Contribution
+## Contribution
 
 Les contributions sont les bienvenues ! Pour contribuer :
 
@@ -357,21 +357,18 @@ Les contributions sont les bienvenues ! Pour contribuer :
 4. Push vers la branche (`git push origin feature/AmazingFeature`)
 5. Ouvrir une Pull Request
 
-## ‍💻 Auteur
+## Auteur
 
 **Reda** - Développeur Data Scientist
 
-## 🙏 Remerciements
+## Remerciements
 
 - **Olist** pour le dataset public
 - **Streamlit** pour le framework
 - **XGBoost/Scikit-learn** pour les outils ML
 - Communauté Kaggle pour les inspirations
 
-## 📧 Contact
+## Contact
 
 Pour toute question ou suggestion, n'hésitez pas à ouvrir une issue sur GitHub.
-
----
-
-⭐ Si ce projet vous a été utile, n'hésitez pas à lui donner une étoile sur GitHub !
+ou sur mon email: mohamed.mohssine@emines.um6p.ma
