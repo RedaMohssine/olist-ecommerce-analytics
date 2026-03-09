@@ -275,17 +275,6 @@ Le projet utilise le **Brazilian E-Commerce Public Dataset by Olist** (Kaggle).
 - Session Streamlit pour persistance
 - Redirection automatique selon rôle
 
-### Rôles et permissions
-
-| Fonctionnalité | Admin | Client |
-|----------------|-------|--------|
-| Dashboard KPI | ✅ | ❌ |
-| Prédiction Livraison | ✅ | ❌ |
-| Analyse Sentiment | ✅ | ❌ |
-| Prédiction Commandes | ✅ | ❌ |
-| Gestion Modèles | ✅ | ❌ |
-| Catalogue Produits | ✅ | ✅ |
-
 ### Créer un nouvel utilisateur
 
 Modifier `database/auth_db.py` :
