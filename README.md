@@ -348,7 +348,7 @@ Les contributions sont les bienvenues ! Pour contribuer :
 
 ## Auteur
 
-**Reda** - Développeur Data Scientist
+**équipe de 5 peronnes dont Mohamed MOHSSINE** - Etudiant Développeur Full Stack / Data Scientist 
 
 ## Remerciements
 
