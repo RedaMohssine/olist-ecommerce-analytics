@@ -4,9 +4,13 @@ Composant de carte produit pour l'interface e-commerce
 
 import streamlit as st
 import pandas as pd
-from utils.data_loader import get_product_review_stats, get_product_review_comments, get_state_options, get_product_seller_state_map
+from utils.data_loader import get_product_review_stats, get_product_review_comments, get_state_options, get_product_seller_state_map, get_products_with_stats
 from utils.shipping_forecast import get_shipping_forecast_model
 from components.translations import get_text
+
+def _compact_html(html):
+    """Retire l'indentation et les lignes vides : sinon Markdown affiche le HTML comme du code"""
+    return "\n".join(line.strip() for line in html.splitlines() if line.strip())
 
 def render_product_card(product, show_actions=True, key_prefix=""):
     """
@@ -29,7 +33,7 @@ def render_product_card(product, show_actions=True, key_prefix=""):
     is_bestseller = product.get('total_sales', 0) > 100
     
     # HTML de la carte
-    st.markdown(f"""
+    st.markdown(_compact_html(f"""
     <div class="product-card fade-in">
         <div class="product-image">
             {product_emoji}
@@ -61,7 +65,7 @@ def render_product_card(product, show_actions=True, key_prefix=""):
             </div>
         </div>
     </div>
-    """, unsafe_allow_html=True)
+    """), unsafe_allow_html=True)
     
     # Boutons d'action
     if show_actions and product.get('in_stock', True):
@@ -245,6 +249,12 @@ def render_product_detail(product, recommendation_engine):
     st.markdown(f"## {get_text('recommendations')}")
     
     recommendations = recommendation_engine.get_recommendations(product['product_id'], n_recommendations=4)
+    
+    # Compléter les champs d'affichage depuis le catalogue (comme dans la grille du catalogue)
+    if not recommendations.empty and 'price' not in recommendations.columns:
+        catalog = get_products_with_stats()
+        extra_fields = ['product_id'] + [c for c in catalog.columns if c not in recommendations.columns]
+        recommendations = recommendations.merge(catalog[extra_fields], on='product_id', how='left')
     
     if not recommendations.empty:
         cols = st.columns(4)

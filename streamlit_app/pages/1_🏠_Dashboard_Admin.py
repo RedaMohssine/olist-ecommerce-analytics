@@ -103,45 +103,45 @@ st.markdown("## 📈 Indicateurs Clés")
 col1, col2, col3, col4, col5 = st.columns(5)
 
 with col1:
-    create_kpi_chart(
-        kpis['total_orders'],
+    st.markdown(create_kpi_chart(
         "Commandes Totales",
+        kpis['total_orders'],
         delta=orders_growth,
         suffix=""
-    )
+    ), unsafe_allow_html=True)
 
 with col2:
-    create_kpi_chart(
-        kpis['total_revenue'],
+    st.markdown(create_kpi_chart(
         "Chiffre d'Affaires",
+        kpis['total_revenue'],
         delta=revenue_growth,
         prefix="R$ ",
         suffix=""
-    )
+    ), unsafe_allow_html=True)
 
 with col3:
-    create_kpi_chart(
-        kpis['total_customers'],
+    st.markdown(create_kpi_chart(
         "Clients Actifs",
+        kpis['total_customers'],
         delta=new_customers_growth,
         suffix=""
-    )
+    ), unsafe_allow_html=True)
 
 with col4:
-    create_kpi_chart(
-        kpis['total_sellers'],
+    st.markdown(create_kpi_chart(
         "Vendeurs",
+        kpis['total_sellers'],
         delta=new_sellers_growth,
         suffix=""
-    )
+    ), unsafe_allow_html=True)
 
 with col5:
-    create_kpi_chart(
-        kpis['avg_rating'],
+    st.markdown(create_kpi_chart(
         "Note Moyenne",
+        f"{kpis['avg_rating']:.2f}",
         prefix="",
         suffix=" / 5"
-    )
+    ), unsafe_allow_html=True)
 
 st.markdown("---")
 
