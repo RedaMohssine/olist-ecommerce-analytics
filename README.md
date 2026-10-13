@@ -10,6 +10,10 @@ Four machine learning models built on the public Olist dataset (Brazilian e-comm
 
 *Delivery time page: prediction from the XGBoost model for an order entered in the form.*
 
+![KNN recommendations](docs/images/knn_recommendations.png)
+
+*Product page: the 4 nearest neighbours returned by the KNN model for a furniture product (R$ 71.36, 4.0 stars, 524 reviews).*
+
 ## Context
 
 - Academic group project for the *Analytics Edge* course at EMINES (UM6P), January 2026.
@@ -34,13 +38,9 @@ Metrics on the held-out test sets, as reported in the notebooks and saved in eac
 | Order forecasting (XGBoost) | R² 0.882, MAE 0.077 units |
 | Recommendation (KNN, k = 5) | 32,183 products, 76 features; 98.8 % of recommended products are in the same category as the query product |
 
-![Sentiment confusion matrix](notebooks/figures/sentiment/03_matrice_confusion.png)
-
-*Confusion matrix of the sentiment model on the test set (from `03_sentiment_analysis.ipynb`).*
-
 ## Running it
 
-Requirements: Python 3.9+.
+Requirements: Python 3.11+ (package versions are pinned in `streamlit_app/requirements.txt`, scikit-learn and XGBoost must match the saved models).
 
 ```bash
 git clone https://github.com/RedaMohssine/olist-ecommerce-analytics.git
