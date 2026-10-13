@@ -111,10 +111,9 @@ class RecommendationEngine:
             return self._baseline_recommendations(product_id, n_recommendations)
         
         try:
-            # Trouver l'index du produit dans le DataFrame
-            product_idx = self.products_df[
-                self.products_df['product_id'] == product_id
-            ].index
+            # Trouver la position du produit dans le DataFrame (et non son étiquette d'index) :
+            # les lignes de features_matrix suivent l'ordre des lignes du DataFrame
+            product_idx = np.flatnonzero(self.products_df['product_id'].values == product_id)
             
             if len(product_idx) == 0:
                 print(f"⚠️ Produit {product_id} non trouvé")
