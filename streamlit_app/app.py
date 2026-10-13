@@ -164,7 +164,7 @@ if not st.session_state.get('authenticated', False):
 
 else:
     # Utilisateur authentifié - Afficher l'interface selon le rôle
-    from components.auth_new import render_user_info
+    from components.auth import render_user_info
     
     # Afficher les infos utilisateur dans la sidebar
     with st.sidebar:
