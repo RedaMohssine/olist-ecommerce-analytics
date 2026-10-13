@@ -4,7 +4,7 @@ Four machine learning models built on the public Olist dataset (Brazilian e-comm
 
 ![Admin dashboard](docs/images/admin_dashboard.png)
 
-*Admin dashboard: orders by state and review statistics computed from the Olist data.*
+*Admin dashboard: key figures and monthly orders and revenue computed from the Olist data.*
 
 ![Delivery time prediction](docs/images/delivery_prediction.png)
 
@@ -12,7 +12,7 @@ Four machine learning models built on the public Olist dataset (Brazilian e-comm
 
 ## Context
 
-- Academic project for the *Analytics Edge* course at EMINES (UM6P), January 2026, in a team of five students.
+- Academic group project for the *Analytics Edge* course at EMINES (UM6P), January 2026.
 - Data: [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) on Kaggle (orders, items, customers, sellers, products, payments and reviews, 2016 to 2018).
 
 ## What we built
