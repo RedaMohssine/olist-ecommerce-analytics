@@ -2,6 +2,14 @@
 
 Four machine learning models built on the public Olist dataset (Brazilian e-commerce, ~100k orders) and served in a Streamlit app: delivery time prediction, review sentiment analysis, order forecasting and product recommendation.
 
+![Admin dashboard](docs/images/admin_dashboard.png)
+
+*Admin dashboard: orders by state and review statistics computed from the Olist data.*
+
+![Delivery time prediction](docs/images/delivery_prediction.png)
+
+*Delivery time page: prediction from the XGBoost model for an order entered in the form.*
+
 ## Context
 
 - Academic project for the *Analytics Edge* course at EMINES (UM6P), January 2026, in a team of five students.
@@ -26,9 +34,9 @@ Metrics on the held-out test sets, as reported in the notebooks and saved in eac
 | Order forecasting (XGBoost) | R² 0.882, MAE 0.077 units |
 | Recommendation (KNN, k = 5) | 32,183 products, 76 features; 98.8 % of recommended products are in the same category as the query product |
 
-| Sentiment confusion matrix | Recommendation: products in PCA space |
-|:---:|:---:|
-| ![Confusion matrix](notebooks/figures/sentiment/03_matrice_confusion.png) | ![PCA of product features](notebooks/figures/evaluation_pca_visualization.png) |
+![Sentiment confusion matrix](notebooks/figures/sentiment/03_matrice_confusion.png)
+
+*Confusion matrix of the sentiment model on the test set (from `03_sentiment_analysis.ipynb`).*
 
 ## Running it
 
