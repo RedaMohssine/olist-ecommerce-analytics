@@ -1,6 +1,6 @@
 """
 Gestionnaire du modèle de prédiction des commandes mensuelles
-Utilise le modèle XGBoost entraîné dans Nombre_commande_ParMois V111.ipynb
+Utilise le modèle XGBoost entraîné dans notebooks/04_order_forecasting.ipynb
 """
 
 import pandas as pd

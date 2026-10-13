@@ -1,6 +1,6 @@
 """
 📦 Page Prédiction des Commandes Mensuelles
-Utilise le modèle XGBoost entraîné dans Nombre_commande_ParMois V111.ipynb
+Utilise le modèle XGBoost entraîné dans notebooks/04_order_forecasting.ipynb
 """
 
 import streamlit as st
@@ -132,7 +132,7 @@ if forecast_model.is_model_loaded():
                 width='stretch'
             )
 else:
-    st.error("❌ Modèle XGBoost non disponible. Veuillez exécuter le notebook Nombre_commande_ParMois V111.ipynb")
+    st.error("❌ Modèle XGBoost non disponible. Veuillez exécuter le notebook notebooks/04_order_forecasting.ipynb")
     st.stop()
 
 st.markdown("---")

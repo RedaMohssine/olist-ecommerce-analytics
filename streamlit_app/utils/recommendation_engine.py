@@ -1,6 +1,6 @@
 """
 Moteur de recommandation basé sur KNN (K-Nearest Neighbors)
-Utilise le modèle entraîné dans Knn_clustring.ipynb
+Utilise le modèle entraîné dans notebooks/05_product_recommendation_knn.ipynb
 """
 
 import pandas as pd

@@ -1,6 +1,6 @@
 """
 Gestionnaire du modèle de prédiction des délais de livraison
-Utilise le modèle XGBoost entraîné dans analytics_shipping_timev2.ipynb
+Utilise le modèle XGBoost entraîné dans notebooks/02_delivery_time_prediction.ipynb
 """
 
 import pandas as pd

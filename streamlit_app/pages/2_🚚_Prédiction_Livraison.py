@@ -1,6 +1,6 @@
 """
 🚚 Page Prédiction du Délai de Livraison
-Utilise le modèle XGBoost entraîné dans analytics_shipping_timev2.ipynb
+Utilise le modèle XGBoost entraîné dans notebooks/02_delivery_time_prediction.ipynb
 """
 
 import streamlit as st
@@ -122,7 +122,7 @@ if shipping_model.is_model_loaded():
             "📊"
         ), unsafe_allow_html=True)
 else:
-    st.error("❌ Modèle XGBoost non disponible. Veuillez exécuter le notebook analytics_shipping_timev2.ipynb")
+    st.error("❌ Modèle XGBoost non disponible. Veuillez exécuter le notebook notebooks/02_delivery_time_prediction.ipynb")
     st.stop()
 
 st.markdown("---")
