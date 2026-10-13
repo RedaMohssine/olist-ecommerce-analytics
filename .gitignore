@@ -1,86 +1,50 @@
-# Fichiers Python
+# Python
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
 *.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+build/
+dist/
 
-# Environnements virtuels
+# Virtual environments
 venv/
-ENV/
+.venv/
 env/
-.venv
 
-# Jupyter Notebook
-.ipynb_checkpoints
-*.ipynb_checkpoints/
+# Jupyter
+.ipynb_checkpoints/
 
-# Base de données
+# Local database (demo accounts are created on first run)
 *.db
 *.sqlite
 *.sqlite3
-database/*.db
 
-# Fichiers de configuration locale
+# Local config and secrets
 .env
 .env.local
-config/local_settings.py
+.streamlit/secrets.toml
 
-# IDE
+# Raw Olist data (download with scripts/download_data.py)
+Data/*.csv
+# Intermediate files written by the notebooks
+notebooks/*.csv
+
+# Model upload history created by the app
+streamlit_app/models/*/history/
+
+# IDE / OS
 .vscode/
 .idea/
 *.swp
-*.swo
-*~
 .DS_Store
+Thumbs.db
 
-# Logs
+# Logs and temporary files
 *.log
-logs/
-
-# Fichiers temporaires
 *.tmp
 *.bak
 *.cache
 .cache/
 
-# Streamlit
-.streamlit/secrets.toml
-
-# Données sensibles (ne pas committer les datasets volumineux)
-# Data/*.csv
-# Décommenter si les datasets sont trop gros pour GitHub
-
-# Modèles ML (fichiers volumineux)
-# models/**/*.pkl
-# models/**/*.joblib
-# Décommenter si les modèles sont trop gros pour GitHub
-
-# OS
-Thumbs.db
-.DS_Store
-Documents/
-*.rar
-*.zip
-*.rar
-*.zip
+# Archives
 *.rar
 *.zip
